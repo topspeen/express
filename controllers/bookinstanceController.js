@@ -1,6 +1,7 @@
 var BookInstance = require('../models/bookinstance');
 
 exports.bookinstance_list = function(req, res, next) {
+
     BookInstance.find()
         .populate('book')
         .exec(function(err, list_bookinstances) {
